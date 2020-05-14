@@ -1,0 +1,21 @@
+'''
+Given: Two positive integers a and b (a<b<10000).
+
+Return: The sum of all odd integers from a through b, inclusively.
+
+Input: 100 200
+Output: 7500
+
+
+'''
+
+total = 0
+list = []
+for i in range (100,200):
+    if i%2 == 1:
+        list.append(i)
+
+print (sum(list))
+
+
+        
