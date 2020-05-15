@@ -26,9 +26,8 @@ Zen 1
 str = "When I find myself in times of trouble Mother Mary comes to me Speaking words of wisdom let it be And in my hour of darkness she is standing right in front of me Speaking words of wisdom let it be Let it be let it be let it be let it be Whisper words of wisdom let it be And when the broken hearted people living in the world agree There will be an answer let it be For though they may be parted there is still a chance that they will see There will be an answer let it be Let it be let it be let it be let it be There will be an answer let it be Let it be let it be let it be let it be Whisper words of wisdom let it be Let it be let it be let it be let it be Whisper words of wisdom let it be And when the night is cloudy there is still a light that shines on me Shine until tomorrow let it be I wake up to the sound of music Mother Mary comes to me Speaking words of wisdom let it be Let it be let it be let it be yeah let it be There will be an answer let it be Let it be let it be let it be yeah let it be Whisper words of wisdom let it be"
  #this will split the sentence into a list
 
-'''for word in str.split(' '):
+'''for word in str.split(' '): #turns out this is a trick: it will only break down the list but it is unusable for this code because it is a loop
     print word'''
-
 
 
 newStrList = str.split(' ') #list of words
@@ -36,17 +35,17 @@ newStrList = str.split(' ') #list of words
 print (len(newStrList))
 outDict = dict() #creates empty dict  {} == dict()   ;  [] == list()
 #print (outDict)
-for x in newStrList: 
+for x in newStrList: #x stores each word in the list, it loops until we reach the last word
  #   print (x)
-    if x not in outDict.keys():
-        outDict[x] = 1
+    if x not in outDict.keys(): #will loop the x list when it finds it once it equals once
+        outDict[x] = 1 
     else:
-        outDict[x] += 1
+        outDict[x] += 1 #when looping, if the same x word in the list appears again, it will add 1 to the count (value
 
 #for , y  in outDict.items():
-#        print(i, y)
+#        print(i, y) # key will always be first even if refered to an integer
 for key, value in outDict.items(): #to print the items in dictionary 
-    print (key, value) 
+    print (key, value) #key refers to words and values refers to numbers
 
 
 #print (outDict)
